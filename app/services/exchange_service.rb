@@ -14,11 +14,10 @@ class ExchangeService
 
     response = RestClient.get("#{api_url}?token=#{api_key}&currency=#{@params[:from]}/#{@params[:to]}")
 
-    result = JSON.parse(response.body)['currency'][0]['value'].to_f
-
-    result * @params[:amount]
+    @params[:amount].to_f * JSON.parse(response.body)['currency'][0]['value'].to_f 
 
   rescue RestClient::ExceptionWithResponse => e
     e.response
   end
+
 end
