@@ -1,0 +1,47 @@
+<%= form_tag(root_path, method: :get, remote: true, id: 'exchange_form') do %>
+
+  <div class='row no-gutters'>
+      
+    <div class='col-5'>
+      <div class='input-group mb-3'>
+        <div class='input-group-prepend'>
+          <span class='input-group-text'>De</span>
+        </div>
+        
+        <%= select_tag :from, grouped_options_for_select(currencies, 'USD'), class: 'form-control' %>
+      </div>
+    </div>
+      
+    <div class='col-2 text-center'>
+      <div class='form-group'>
+        <button id='btn_exchange' type='button' class='btn btn-primary'><%= fa_icon(:'exchange-alt')%></button>
+      </div>
+    </div>
+
+    <div class='col-5'>
+      <div class='input-group mb-3'>
+        <div class='input-group-prepend'>
+          <span class='input-group-text'>Para</span>
+        </div>
+        
+        <%= select_tag :to, grouped_options_for_select(currencies, 'BRL'), class: 'form-control' %>
+      </div>
+    </div>
+      
+  </div>
+
+  <div class='row'>
+    <div class='col-12'>
+      <div class='input-group mb-3'>
+        <%= number_field_tag :amount, nil, min: 1, class:'form-control', placeholder:'Quantidade ($1)' %>
+                
+        <div class='input-group-append'>
+          <span class='input-group-text border-right-0'>=</span>
+        </div>
+        
+        <%= text_field_tag :quotation, @quotation, class:'form-control border-left-0', disabled: true, data: { quotation: @quotation } %>
+      </div>
+    </div> 
+  </div>
+
+<% end %>

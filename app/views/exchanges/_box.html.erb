@@ -1,0 +1,29 @@
+<div class='card border-0 mb-2'>
+  <div class='card-header bg-secondary pb-0'>
+    <h5 class='card-title text-white'>Conversor de Moeda</h5>
+  </div>
+
+  <div class='card-body'>
+    <p class='card-text text-muted mb-4'>Selecione a moeda ou criptomoeda para qual deseja converter.</p>
+    
+    <%= render 'form' %>
+    
+    <div class='row'>
+      <div class='col-12'>
+      
+        <div class='spinner-wait'>
+          <%= fa_icon :'spinner spin' %>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class='card-footer text-muted text-center'>
+    <%= mail_to 'ramoraess@gmail.com', fa_icon(:envelope), class: 'p-2' %>
+    <%= link_to fab_icon(:linkedin), 'https://www.linkedin.com/in/ricardo-a-moraes', class: 'p-2', target: :blank %>
+    <%= link_to fab_icon(:github), 'https://github.com/rmoraes', class:'p-2', target: :blank %>
+  </div>
+</div>
+
+

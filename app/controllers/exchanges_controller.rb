@@ -1,15 +1,12 @@
+# frozen_string_literal: true
+
 class ExchangesController < ApplicationController
   def index
-  end
- 
-  def convert
-    result = ExchangeService.new(exchange_params).convert
-    render json: { result: result }
+    @quotation = ExchangeService.new(exchange_params).convert
   end
 
-  private 
-
-  def exchange_params
-    params.permit(:amount, :from, :to)
-  end
+  private
+    def exchange_params
+      params.permit(:from, :to)
+    end
 end

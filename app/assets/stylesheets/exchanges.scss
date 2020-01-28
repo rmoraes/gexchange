@@ -1,0 +1,51 @@
+body {
+  background: image-url('background.jpg') no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: auto;
+}
+
+.btn, .form-control, .h-component{
+  height: calc(2.25rem + 8px);
+}
+
+select.form-control {
+  border: 1px solid #ccc;
+  -webkit-appearance: initial;
+}
+
+.fa-primary-position{
+  z-index: 2;
+  .fa-circle{
+    color: #007bff;
+  }
+}
+
+.fa-secondary-position{
+  margin-left: -40px;
+  z-index: 1;
+  .fa-circle{
+    color: #6c757d;
+  }
+}
+
+.spinner-wait{
+  position: absolute;
+  top: -54px;
+  right: 26px;
+  display: none;
+  font-size: 22px;
+}
+ 
+.title-box{
+  margin-top: 20%;
+  
+  .subtitle{
+    color: white;
+    text-shadow: 3px 0px 3px #000000;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

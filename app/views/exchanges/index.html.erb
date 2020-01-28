@@ -1,2 +1,29 @@
-<h1>Exchanges#index</h1>
-<p>Find me in app/views/exchanges/index.html.erb</p>
+<div class='container'>
+  <div class='row pt-5'>
+
+    <div class='col-md-8 col-lg-5'>
+      
+      <div class='row'>
+        <div class='col-sm-12 text-sm-center'>
+          <%= fa_stacked_icon(:'globe inverse', base: :'circle text-primary', class:'fa-2x fa-primary-position') %>
+          <%= fa_stacked_icon(:'euro-sign inverse', base: :'circle text-secondary', class:'fa-2x fa-secondary-position') %>
+          <h4 class='text-white'>Global Exchange</h4>
+        </div>
+      </div>
+ 
+      <div class='row pt-3'>
+        <div class='col-sm-12'>
+          <%= render 'box' %>
+        </div>
+      </div>
+
+    </div>
+ 
+    <div class='col-md-4 col-lg-7 title-box d-none d-lg-block'>
+      <h2 class='subtitle'>Converta facilmente</h2>
+      <h2 class='subtitle'>Moedas e Criptomoedas</h2>
+      <h3 class='subtitle'>Para qualquer moeda no Mundo!</h3>
+    </div>
+
+  </div>
+</div>
