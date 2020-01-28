@@ -1,24 +1,24 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Repo List](public/favicon.ico) 
+# Global Exchange
 
-Things you may want to cover:
+Simple currency and cryptocurrency converter
 
-* Ruby version
 
-* System dependencies
+Configuration
 
-* Configuration
+- Ruby + Ruby On Rails
+  - rspec
+  - rest-client
+  - webmock
+  
+- Docker
+- Docker-compose
 
-* Database creation
+- Yarn
 
-* Database initialization
+- Deploy
+  - Codeship
+  - Heroku
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+YAY! You're running Global Exchange on [https://gexchange.herokuapp.com](https://gexchange.herokuapp.com).
