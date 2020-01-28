@@ -1,4 +1,5 @@
 {
+  "engines" : { "node" : ">=6" },
   "name": "gexchange",
   "private": true,
   "dependencies": {
